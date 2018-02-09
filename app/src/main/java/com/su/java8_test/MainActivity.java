@@ -34,9 +34,14 @@ public class MainActivity extends AppCompatActivity {
                         + MyInterface.getStaticMethod());
 
                 mCodeTv.setText("UseInterfaceUtils mUtils = new UseInterfaceUtils();\n\n"
+
                         + "mUtils.getIntrodution() \n"
                         + "mUtils.getDelautMethod()\n"
-                        + "MyInterface.getStaticMethod()");
+                        + "MyInterface.getStaticMethod()\n\n"
+
+                        + "    default String getDelautMethod() {\n" +
+                        "        return \"这是默认方法\";\n" +
+                        "    }");
                 break;
         }
     }
