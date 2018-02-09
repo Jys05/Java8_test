@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Java8_Test</string>
+
+    <string name="return_result">返回结果：</string>
+
+    <string name="parent_interface_method">父接口的DelautMethod</string>
+    <string name="interface_method">子接口的DelautMethod</string>
+    <string name="use_method">调用方法：</string>
 </resources>

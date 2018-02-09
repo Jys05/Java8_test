@@ -24,6 +24,19 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def date = new Date().format("yyyyMMdd" , TimeZone.getTimeZone("GMT+08"))
+
+            if(variant.buildType.name.equals("debug")){
+                outputFileName = "Java8_Test_Dedug${date}_${versionName}.apk"
+            }
+            if(variant.buildType.name.equals("release")){
+                outputFileName = "Java8_Test${date}_${versionName}.apk"
+            }
+        }
+    }
 }
 
 dependencies {
